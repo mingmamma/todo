@@ -45,23 +45,20 @@ object InMemoryModel extends Model:
     update(id)(_.complete)
 
   def update(id: Id)(f: Task => Task): Option[Task] =
-    idStore.updateWith(id)(opt => opt.map(f))
+    idStore.updateWith(id)(_.map(f))
 
   def delete(id: Id): Boolean =
     var found = false
-    val deletedTask = idStore.remove(id)
-    deletedTask match
-      case Some(_) => true
-      case None => false
+    idStore.remove(id).nonEmpty// idStore.remove(id).isDefined
 
   def tasks: Tasks =
     Tasks(idStore)
 
   def tags: Tags =
-    Tags(idStore.values.flatMap(task=>task.tags).toList.distinct)
+    Tags(idStore.flatMap((_, task)=>task.tags).toList.distinct)
 
   def tasks(tag: Tag): Tasks =
-    Tasks(idStore.filter((id,task)=>task.tags.contains(tag)))
+    Tasks(idStore.filter((_,task)=>task.tags.contains(tag)))
 
   def clear(): Unit =
     idStore.clear()

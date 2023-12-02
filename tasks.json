@@ -1,2 +1,33 @@
 [
+  {
+    "id" : 0,
+    "task" : {
+      "state" : {
+        "state" : "completed",
+        "date" : "2023-12-02T15:55:33.209025+11:00[Australia/Melbourne]"
+      },
+      "description" : "Go out",
+      "notes" : null,
+      "tags" : [
+        {
+          "tag" : "play"
+        }
+      ]
+    }
+  },
+  {
+    "id" : 1,
+    "task" : {
+      "state" : {
+        "state" : "active"
+      },
+      "description" : "Come home",
+      "notes" : null,
+      "tags" : [
+        {
+          "tag" : "sleep"
+        }
+      ]
+    }
+  }
 ]

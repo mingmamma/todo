@@ -42,10 +42,7 @@ object PersistentModel extends Model:
     if Files.exists(idPath) then
       load[Id](idPath)
     else
-      Id(0)
-
-  /* Every Task is associated with an Id. Ids must be unique. */
-  private val idGenerator = IdGenerator(loadId())    
+      Id(0)  
 
   /**
    * Load JSON-encoded data from a file.
@@ -101,9 +98,11 @@ object PersistentModel extends Model:
    */
 
   def create(task: Task): Id =
-    val id = idGenerator.nextId()
+    val id = loadId()
     val tasks = Tasks(loadTasks().toMap + (id -> task))
     saveTasks(tasks)
+    val nextId = id.next
+    saveId(nextId)
     id
 
   def read(id: Id): Option[Task] =
@@ -111,7 +110,7 @@ object PersistentModel extends Model:
     tasks.toMap.get(id)
 
   def update(id: Id)(f: Task => Task): Option[Task] =
-    val updatedTasks = loadTasks().toMap.updatedWith(id)(opt => opt.map(f))
+    val updatedTasks = loadTasks().toMap.updatedWith(id)(_.map(f))
     saveTasks(Tasks(updatedTasks))
     updatedTasks.get(id)
 
@@ -124,13 +123,13 @@ object PersistentModel extends Model:
     loadTasks()
 
   def tasks(tag: Tag): Tasks =
-    Tasks(loadTasks().toMap.filter((id,task)=>task.tags.contains(tag)))
+    Tasks(loadTasks().toMap.filter((_,task)=>task.tags.contains(tag)))
 
   def complete(id: Id): Option[Task] =
-    update(id)(task=>task.complete)
+    update(id)(_.complete)
 
   def tags: Tags =
-    Tags(loadTasks().toMap.values.flatMap(tasks=>tasks.tags).toList.distinct)
+    Tags(loadTasks().toMap.flatMap((_, tasks)=>tasks.tags).toList.distinct)
 
   /**
   * Delete the tasks and id files if they exist.

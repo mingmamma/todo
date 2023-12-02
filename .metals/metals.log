@@ -486,3 +486,101 @@ WARNING: Unmatched cancel notification for request id 9418
 2023.12.01 20:58:25 INFO  Attaching to debuggee VM succeeded.
 2023.12.01 20:58:26 INFO  Canceling debug proxy for [todo.TodoSuite()]
 2023.12.01 20:58:26 INFO  Closing debug server tcp://0.0.0.0:57521
+2023.12.02 15:18:06 INFO  compiling todo (1 scala source)
+2023.12.02 15:18:06 INFO  time: compiled todo in 0.7s
+2023.12.02 15:18:29 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.12.02 15:18:29 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.12.02 15:18:29 INFO  Starting debug proxy for [todo.TodoSuite()]
+2023.12.02 15:18:30 INFO  Trying to attach to remote debuggee VM localhost:57871 .
+2023.12.02 15:18:30 INFO  Attaching to debuggee VM succeeded.
+2023.12.02 15:18:31 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2023.12.02 15:18:31 INFO  Closing debug server tcp://0.0.0.0:57867
+2023.12.02 15:22:10 INFO  compiling todo (1 scala source)
+2023.12.02 15:22:11 INFO  time: compiled todo in 1s
+2023.12.02 15:22:52 INFO  compiling todo (1 scala source)
+2023.12.02 15:22:52 INFO  time: compiled todo in 0.73s
+2023.12.02 15:22:52 INFO  compiling todo (1 scala source)
+2023.12.02 15:22:54 INFO  time: compiled todo in 0.73s
+2023.12.02 15:22:56 INFO  compiling todo (1 scala source)
+2023.12.02 15:22:56 INFO  time: compiled todo in 0.9s
+2023.12.02 15:22:59 INFO  compiling todo (1 scala source)
+2023.12.02 15:22:59 INFO  time: compiled todo in 0.64s
+Dec. 02, 2023 3:23:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala:925)
+	at scala.meta.internal.metals.debug.DebugProvider.ensureNoWorkspaceErrors(DebugProvider.scala:387)
+	at scala.meta.internal.metals.debug.DebugProvider.$anonfun$startTestSuite$4(DebugProvider.scala:674)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2023.12.02 15:23:28 INFO  compiling todo (1 scala source)
+2023.12.02 15:23:28 INFO  time: compiled todo in 0.73s
+2023.12.02 15:23:59 INFO  compiling todo (1 scala source)
+2023.12.02 15:23:59 INFO  time: compiled todo in 0.45s
+Exception in thread "pool-11-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023.12.02 15:24:13 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.12.02 15:24:13 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.12.02 15:24:13 INFO  Starting debug proxy for [todo.TodoSuite()]
+2023.12.02 15:24:13 INFO  Trying to attach to remote debuggee VM localhost:57908 .
+2023.12.02 15:24:13 INFO  Attaching to debuggee VM succeeded.
+2023.12.02 15:24:14 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2023.12.02 15:24:14 INFO  Closing debug server tcp://0.0.0.0:57905
+2023.12.02 15:34:22 INFO  compiling todo (1 scala source)
+2023.12.02 15:34:22 INFO  time: compiled todo in 0.47s
+2023.12.02 15:35:46 INFO  compiling todo (1 scala source)
+2023.12.02 15:35:46 INFO  time: compiled todo in 0.43s
+2023.12.02 15:36:02 INFO  compiling todo (1 scala source)
+2023.12.02 15:36:02 INFO  time: compiled todo in 0.5s
+2023.12.02 15:36:18 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.12.02 15:36:18 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.12.02 15:36:18 INFO  Starting debug proxy for [todo.TodoSuite()]
+2023.12.02 15:36:18 INFO  Trying to attach to remote debuggee VM localhost:57947 .
+2023.12.02 15:36:18 INFO  Attaching to debuggee VM succeeded.
+2023.12.02 15:36:19 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2023.12.02 15:36:19 INFO  Closing debug server tcp://0.0.0.0:57942
+2023.12.02 15:40:05 INFO  compiling todo (1 scala source)
+2023.12.02 15:40:05 INFO  time: compiled todo in 0.74s
+2023.12.02 15:47:33 INFO  compiling todo (1 scala source)
+2023.12.02 15:47:33 INFO  time: compiled todo in 0.5s
+2023.12.02 15:47:57 INFO  compiling todo (1 scala source)
+2023.12.02 15:47:57 INFO  time: compiled todo in 0.41s
+2023.12.02 15:50:12 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.12.02 15:50:12 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.12.02 15:50:13 INFO  Starting debug proxy for [todo.TodoSuite()]
+2023.12.02 15:50:13 INFO  Trying to attach to remote debuggee VM localhost:57988 .
+2023.12.02 15:50:13 INFO  Attaching to debuggee VM succeeded.
+2023.12.02 15:50:14 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2023.12.02 15:50:14 INFO  Closing debug server tcp://0.0.0.0:57984
+2023.12.02 15:52:36 INFO  compiling todo (1 scala source)
+2023.12.02 15:52:36 INFO  time: compiled todo in 0.61s
+2023.12.02 15:52:39 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.12.02 15:52:39 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.12.02 15:52:40 INFO  Starting debug proxy for [todo.TodoSuite()]
+2023.12.02 15:52:40 INFO  Trying to attach to remote debuggee VM localhost:58004 .
+2023.12.02 15:52:40 INFO  Attaching to debuggee VM succeeded.
+2023.12.02 15:52:41 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2023.12.02 15:52:41 INFO  Closing debug server tcp://0.0.0.0:58001
