@@ -12,6 +12,10 @@ import java.time.ZonedDateTime
  * JSON encoding and changing the definitions here will break the user
  * interface.
  */
+
+// The following Codecs definition closely follows the examples of custom encodes/decoders in circe
+// https://circe.github.io/circe/codecs/custom-codecs.html#custom-encodersdecoders
+
 object Codecs:
   given idEncoder: Codec[Id] with
     def apply(c: HCursor): Decoder.Result[Id] =

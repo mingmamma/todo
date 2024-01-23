@@ -584,3 +584,212 @@ Exception in thread "pool-11-thread-2" java.lang.InterruptedException
 2023.12.02 15:52:40 INFO  Attaching to debuggee VM succeeded.
 2023.12.02 15:52:41 INFO  Canceling debug proxy for [todo.TodoSuite()]
 2023.12.02 15:52:41 INFO  Closing debug server tcp://0.0.0.0:58001
+2023.12.02 15:56:54 INFO  Shutting down server
+2023.12.02 15:56:54 INFO  shutting down Metals
+2023.12.02 15:56:54 INFO  Shut down connection with build server.
+2023.12.02 15:56:54 INFO  Shut down connection with build server.
+2023.12.02 15:56:54 INFO  Shut down connection with build server.
+2023.12.02 15:56:54 INFO  Exiting server
+2024.01.22 19:34:09 INFO  Started: Metals version 1.2.0 in folders '/Users/mingma/todo' for client Visual Studio Code 1.85.1.
+2024.01.22 19:34:10 INFO  Attempting to connect to the build server...
+2024.01.22 19:34:10 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.22 19:34:10 INFO  skipping build import with status 'Installed'
+2024.01.22 19:34:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.22 19:34:11 INFO  Attempting to connect to the build server...
+2024.01.22 19:34:11 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.22 19:34:11 INFO  Attempting to connect to the build server...
+2024.01.22 19:34:11 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.22 19:34:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/project/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.22 19:34:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+Jan. 22, 2024 7:34:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Jan. 22, 2024 7:34:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan. 22, 2024 7:34:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.01.22 19:34:12 INFO  time: Connected to build server in 1.58s
+2024.01.22 19:34:12 INFO  Connected to Build server: Bloop v1.5.13
+2024.01.22 19:34:18 INFO  no build target found for /Users/mingma/todo/src/main/scala/todo/data/Codecs.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.22 19:34:22 INFO  time: indexed workspace in 3.45s
+2024.01.22 19:34:22 INFO  compiling todo (14 scala sources)
+2024.01.22 19:34:29 INFO  time: compiled todo in 6.26s
+2024.01.22 19:34:29 INFO  compiling todo-test (3 scala sources)
+2024.01.22 19:34:33 INFO  time: compiled todo-test in 3.99s
+2024.01.23 08:52:45 INFO  compiling todo-test (1 scala source)
+2024.01.23 08:52:53 INFO  time: compiled todo-test in 8.27s
+2024.01.23 08:52:53 INFO  compiling todo-test (1 scala source)
+2024.01.23 08:52:57 INFO  time: compiled todo-test in 3.52s
+Jan. 23, 2024 8:52:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala:912)
+	at scala.meta.internal.metals.debug.DebugProvider.ensureNoWorkspaceErrors(DebugProvider.scala:388)
+	at scala.meta.internal.metals.debug.DebugProvider.$anonfun$startTestSuite$4(DebugProvider.scala:681)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2024.01.23 09:06:12 INFO  compiling todo (1 scala source)
+2024.01.23 09:06:12 INFO  time: compiled todo in 0.71s
+2024.01.23 09:06:31 INFO  compiling todo (1 scala source)
+2024.01.23 09:06:31 INFO  time: compiled todo in 0.12s
+2024.01.23 09:06:49 INFO  compiling todo (1 scala source)
+2024.01.23 09:06:49 INFO  time: compiled todo in 0.3s
+2024.01.23 09:07:08 INFO  compiling todo (1 scala source)
+2024.01.23 09:07:14 INFO  time: compiled todo in 5.45s
+2024.01.23 09:08:19 INFO  compiling todo (1 scala source)
+2024.01.23 09:08:20 INFO  time: compiled todo in 1.53s
+2024.01.23 09:09:06 INFO  compiling todo (1 scala source)
+2024.01.23 09:09:06 WARN  Using indexes to guess the definition of IdOrdering
+2024.01.23 09:09:07 INFO  time: compiled todo in 1.24s
+2024.01.23 09:10:19 INFO  compiling todo (1 scala source)
+2024.01.23 09:10:20 INFO  time: compiled todo in 1.48s
+2024.01.23 09:27:51 INFO  compiling todo (1 scala source)
+2024.01.23 09:27:53 INFO  time: compiled todo in 1.89s
+Jan. 23, 2024 9:37:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1758
+Jan. 23, 2024 9:39:20 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.UnsupportedOperationException: tail of empty list
+java.util.concurrent.CompletionException: java.lang.UnsupportedOperationException: tail of empty list
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.UnsupportedOperationException: tail of empty list
+	at scala.collection.immutable.Nil$.tail(List.scala:664)
+	at scala.collection.immutable.Nil$.tail(List.scala:661)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$endPosOfTree$1(CreateCompanionObjectCodeAction.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.endPosOfTree(CreateCompanionObjectCodeAction.scala:75)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$5(CreateCompanionObjectCodeAction.scala:61)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$4(CreateCompanionObjectCodeAction.scala:58)
+	at scala.Option$WithFilter.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$2(CreateCompanionObjectCodeAction.scala:56)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$1(CreateCompanionObjectCodeAction.scala:55)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2024.01.23 09:40:28 INFO  compiling todo (1 scala source)
+2024.01.23 09:40:28 INFO  time: compiled todo in 0.31s
+Jan. 23, 2024 9:42:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2510
+2024.01.23 09:42:22 INFO  compiling todo (1 scala source)
+2024.01.23 09:42:22 INFO  compiling todo (1 scala source)
+2024.01.23 09:42:22 INFO  time: compiled todo in 0.64s
+2024.01.23 09:42:29 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/IdGenerator.scala
+2024.01.23 09:42:29 INFO  compiling todo (1 scala source)
+2024.01.23 09:42:29 INFO  time: compiled todo in 0.88s
+2024.01.23 09:42:42 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.01.23 09:42:42 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.01.23 09:42:42 INFO  Starting debug proxy for [todo.IdGeneratorSuite()]
+2024.01.23 09:42:43 INFO  Trying to attach to remote debuggee VM localhost:50418 .
+2024.01.23 09:42:43 INFO  Attaching to debuggee VM succeeded.
+2024.01.23 09:42:44 INFO  Canceling debug proxy for [todo.IdGeneratorSuite()]
+2024.01.23 09:42:44 INFO  Closing debug server tcp://0.0.0.0:50414
+2024.01.23 10:08:31 INFO  compiling todo-test (1 scala source)
+2024.01.23 10:08:34 INFO  time: compiled todo-test in 2.26s
+Exception in thread "pool-5-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024.01.23 10:38:07 INFO  compiling todo (1 scala source)
+2024.01.23 10:38:10 INFO  time: compiled todo in 2.47s
+2024.01.23 10:43:39 INFO  compiling todo (1 scala source)
+2024.01.23 10:43:41 INFO  time: compiled todo in 1.6s
+2024.01.23 10:43:44 INFO  compiling todo (1 scala source)
+2024.01.23 10:43:45 INFO  time: compiled todo in 1.21s
+2024.01.23 10:43:54 INFO  compiling todo (1 scala source)
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:54 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:43:55 INFO  time: compiled todo in 1.04s
+2024.01.23 10:43:59 INFO  compiling todo (1 scala source)
+Exception in thread "pool-5-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024.01.23 10:43:59 INFO  time: compiled todo in 0.82s
+2024.01.23 10:44:16 INFO  compiling todo (1 scala source)
+2024.01.23 10:44:16 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:44:16 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:44:16 INFO  time: compiled todo in 0.52s
+2024.01.23 10:46:49 INFO  compiling todo (1 scala source)
+2024.01.23 10:46:49 INFO  time: compiled todo in 0.54s
+2024.01.23 10:47:33 INFO  compiling todo (1 scala source)
+2024.01.23 10:47:33 INFO  time: compiled todo in 0.78s
+2024.01.23 10:47:34 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:38 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:40 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:41 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:43 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:43 INFO  compiling todo (1 scala source)
+2024.01.23 10:47:43 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:43 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/InMemoryModel.scala
+2024.01.23 10:47:43 INFO  time: compiled todo in 0.68s
+2024.01.23 10:47:57 INFO  compiling todo (1 scala source)
+2024.01.23 10:47:57 INFO  time: compiled todo in 0.62s
+2024.01.23 10:48:39 INFO  compiling todo (1 scala source)
+2024.01.23 10:48:39 INFO  time: compiled todo in 0.41s
+2024.01.23 10:49:47 INFO  compiling todo (1 scala source)
+2024.01.23 10:49:47 INFO  time: compiled todo in 0.43s
+2024.01.23 11:00:43 INFO  compiling todo (1 scala source)
+2024.01.23 11:00:43 INFO  time: compiled todo in 0.4s
+2024.01.23 11:05:00 INFO  compiling todo (1 scala source)
+2024.01.23 11:05:00 INFO  time: compiled todo in 0.41s
+2024.01.23 11:05:55 INFO  compiling todo (1 scala source)
+2024.01.23 11:05:55 INFO  time: compiled todo in 0.54s
+2024.01.23 11:07:29 INFO  compiling todo (1 scala source)
+2024.01.23 11:07:30 INFO  time: compiled todo in 1.28s
+2024.01.23 11:07:43 INFO  compiling todo (1 scala source)
+2024.01.23 11:07:43 INFO  time: compiled todo in 0.44s
+2024.01.23 11:09:58 INFO  compiling todo (1 scala source)
+2024.01.23 11:09:58 INFO  time: compiled todo in 0.91s
+2024.01.23 11:10:49 INFO  compiling todo (1 scala source)
+2024.01.23 11:10:49 INFO  time: compiled todo in 0.87s
+2024.01.23 11:13:26 INFO  compiling todo (1 scala source)
+2024.01.23 11:13:26 INFO  time: compiled todo in 0.76s
+2024.01.23 11:16:36 INFO  compiling todo (1 scala source)
+2024.01.23 11:16:37 INFO  time: compiled todo in 1.12s
+Jan. 23, 2024 11:19:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5708
+2024.01.23 11:19:38 INFO  compiling todo (1 scala source)
+2024.01.23 11:19:38 INFO  time: compiled todo in 0.42s
+2024.01.23 11:20:21 INFO  compiling todo (1 scala source)
+2024.01.23 11:20:21 INFO  time: compiled todo in 0.44s

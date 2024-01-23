@@ -6,6 +6,8 @@ import munit.*
 /**
  * Tests for the IdGenerator
  */
+// See MUnit for a quick start to declare some tests:
+// https://scalameta.org/munit/docs/tests.html
 class IdGeneratorSuite extends FunSuite:
   test("generated Ids are monotonically increasing"){
     val generator = IdGenerator(Id(0))

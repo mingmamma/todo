@@ -30,35 +30,53 @@ object InMemoryModel extends Model:
    * Note that this data structure is not safe to use with concurrent access.
    * This doesn't matter in this case study, but in a real situation it would be
    * a problem. In a future week we'll learn the techniques to address this. */
+  
+   // Note the in-memory data structure for a collection of tasks is the MUTABLE LinkedHashMap
+   // https://docs.scala-lang.org/overviews/collections-2.13/overview.html
   private val idStore: mutable.LinkedHashMap[Id, Task] =
     mutable.LinkedHashMap.from(defaultTasks)
 
+  // put method is specific to mutable maps, noting that it has a return value
+  // but not useful in this case
   def create(task: Task): Id =
     val id = idGenerator.nextId()
-    idStore.put(id, task)
+    val _ = idStore.put(id, task)
     id
 
+  // Use get() method since the required return type is an Option
+  // Use map.apply() or equivalently, map() to get unwrapped value by key
+  // exception raised if key NOT existing, comparable API to Rust
   def read(id: Id): Option[Task] =
     idStore.get(id)
 
   def complete(id: Id): Option[Task] =
-    update(id)(_.complete)
+    update(id)((task: Task) => (task.complete: Task))
 
+  // Noting the parameter required by the updateWith() method
   def update(id: Id)(f: Task => Task): Option[Task] =
-    idStore.updateWith(id)(_.map(f))
+    idStore.updateWith(id)((task: Option[Task]) => (task.map(f): Option[Task]))
 
+  // Noting the semantic difference of remove() method beween immutable & mutable maps
+  // remove() of immutable maps return the map with the key removed 
+  // remove() of mutable maps return an option to the value associated to the removed key, hence some(v) if existed OR None
   def delete(id: Id): Boolean =
     var found = false
-    idStore.remove(id).nonEmpty// idStore.remove(id).isDefined
+    idStore.remove(id).nonEmpty
+    // nonEmpty and isDefined are equivalent methods for Option
+    // https://www.scala-lang.org/api/3.3.1/scala/Option.html
+    // idStore.remove(id).isDefined
 
   def tasks: Tasks =
     Tasks(idStore)
 
   def tags: Tags =
-    Tags(idStore.flatMap((_, task)=>task.tags).toList.distinct)
+    Tags(idStore.flatMap((id: Id, task: Task) => 
+      (task.tags: List[Tag])).toList.distinct)
 
   def tasks(tag: Tag): Tasks =
-    Tasks(idStore.filter((_,task)=>task.tags.contains(tag)))
+    Tasks(idStore.filter((id: Id, task: Task) => 
+      (task.tags.contains(tag): Boolean)))
 
+  // clear() method removes all mapping off a mutable map
   def clear(): Unit =
     idStore.clear()
