@@ -16,12 +16,23 @@ import java.time.ZonedDateTime
 // The following Codecs definition closely follows the examples of custom encodes/decoders in circe
 // https://circe.github.io/circe/codecs/custom-codecs.html#custom-encodersdecoders
 
+// Codecs is a convinient type class that helps define Encoder and Decoder type class 
+// https://circe.github.io/circe/api/io/circe/Codec.html
 object Codecs:
   given idEncoder: Codec[Id] with
+    // Use the downField method within HCursor to extract the given field from Json
+    // https://circe.github.io/circe/cursors.html
+
+    // Result is a common alias for a Either type, used since the as[T] call may fail
     def apply(c: HCursor): Decoder.Result[Id] =
       c.downField("id").as[Int].map(id => Id(id))
 
+    // Encoder's apply method, Encoder converts a value of certain type of a Json value
+    // https://circe.github.io/circe/api/io/circe/Encoder.html
     def apply(id: Id): Json =
+      // Making use of the methods e.g. obj(), fromInt() from the Json companion object
+      // to create respective Json values for different types
+      // https://circe.github.io/circe/api/io/circe/Json$.html
       Json.obj("id" -> Json.fromInt(id.toInt))
 
 

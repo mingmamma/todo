@@ -17,7 +17,11 @@ class TodoSuite extends FunSuite:
 
   // Fixtures handle setting up and cleaning up state
 
-  def makeModelFixture(name: String, model: Model) = FunFixture[(String, Model)](
+  // This makeModelFixture function wraps a FunFixture.apply() call in the FunFixture companion
+  // object that returns a FunFixture class instance with parameterised type (String, Model).
+  // The setup and teardown are the two required parameters in the .apply() call, see its usage in doco:
+  // https://scalameta.org/munit/docs/fixtures.html#functional-test-local-fixtures
+  def makeModelFixture(name: String, model: Model) = FunFixture[(String, Model)].apply(
     setup = { test =>
       model.clear()
       (name, model)
@@ -29,7 +33,11 @@ class TodoSuite extends FunSuite:
   val persistentFixture = makeModelFixture("PersistentModel", PersistentModel)
 
   // Custom assertions. These make our code more readable and give more useful messages on errors
-
+  // These customisations follow the pattern examples on declaraing test assertions within a helper method
+  // Where the helper methods usually takes the actual and expected objects as parameter s.t.
+  // multiple tests are made with parameterised inputs
+  // https://scalameta.org/munit/docs/tests.html#declare-tests-inside-a-helper-function
+  
   def assertTask(
     modelName: String,
     actual: Option[Task],
@@ -37,6 +45,7 @@ class TodoSuite extends FunSuite:
   )(using loc: munit.Location): Unit =
     actual match
       case None =>
+        // Use fail to fail this branch outright: https://scalameta.org/munit/docs/assertions.html#fail
         fail(s"Using $modelName: We expected the task $expected but we received None instead.")
       case Some(task) =>
         assertEquals(task, expected, s"Using $modelName: We expected the task $expected but we received $task instead.")
@@ -62,7 +71,10 @@ class TodoSuite extends FunSuite:
         assert(t.state.completed, s"Using $modelName: We expected the task's state to be completed but it was ${t.state}")
 
   // The tests, parameterized by a fixture
-
+  
+  // The allTests function accepts the (model-parameterised) fixture in the parameter, and .test() call on the fixture instance is the
+  // way to run each test (buffered with the fixture)
+  // https://scalameta.org/munit/docs/fixtures.html#functional-test-local-fixtures
   def allTests(fixture: FunFixture[(String, Model)]): Unit =
     fixture.test("Created tasks can be read"){ case (name, model) =>
       val id1 = model.create(task1)

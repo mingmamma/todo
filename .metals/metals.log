@@ -793,3 +793,174 @@ WARNING: Unmatched cancel notification for request id 5708
 2024.01.23 11:19:38 INFO  time: compiled todo in 0.42s
 2024.01.23 11:20:21 INFO  compiling todo (1 scala source)
 2024.01.23 11:20:21 INFO  time: compiled todo in 0.44s
+2024.01.23 19:48:24 INFO  compiling todo (1 scala source)
+2024.01.23 19:48:26 INFO  time: compiled todo in 1.88s
+2024.01.23 20:22:35 INFO  compiling todo (1 scala source)
+2024.01.23 20:22:39 INFO  time: compiled todo in 3.03s
+2024.01.23 20:22:54 INFO  compiling todo (1 scala source)
+2024.01.23 20:22:57 INFO  time: compiled todo in 2.19s
+2024.01.24 15:29:04 INFO  Shutting down server
+2024.01.24 15:29:04 INFO  shutting down Metals
+2024.01.24 15:29:04 INFO  Shut down connection with build server.
+2024.01.24 15:29:04 INFO  Shut down connection with build server.
+2024.01.24 15:29:04 INFO  Shut down connection with build server.
+2024.01.24 15:29:04 INFO  Exiting server
+2024.01.24 15:30:54 INFO  Started: Metals version 1.2.0 in folders '/Users/mingma/todo' for client Visual Studio Code 1.85.2.
+2024.01.24 15:30:59 INFO  Attempting to connect to the build server...
+2024.01.24 15:30:59 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.24 15:30:59 INFO  skipping build import with status 'Installed'
+2024.01.24 15:31:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.24 15:31:00 INFO  Attempting to connect to the build server...
+2024.01.24 15:31:00 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.24 15:31:00 INFO  Attempting to connect to the build server...
+2024.01.24 15:31:00 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.24 15:31:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/project/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.24 15:31:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.24 15:31:01 INFO  time: Connected to build server in 2s
+2024.01.24 15:31:01 INFO  Connected to Build server: Bloop v1.5.13
+2024.01.24 15:31:01 INFO  time: Imported build in 0.3s
+2024.01.24 15:31:26 INFO  no build target found for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.24 15:31:46 INFO  time: indexed workspace in 17s
+Jan. 25, 2024 10:26:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 53
+Jan. 25, 2024 12:54:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 120
+2024.01.25 12:54:25 INFO  compiling todo-build (3 scala sources)
+2024.01.25 12:54:28 INFO  time: code lens generation in 4.06s
+2024.01.25 12:54:40 INFO  time: compiled todo-build in 15s
+2024.01.25 13:03:18 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.01.25 13:03:18 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.01.25 13:03:18 INFO  Starting debug proxy for [todo.IdGeneratorSuite()]
+2024.01.25 13:03:18 INFO  Trying to attach to remote debuggee VM localhost:57336 .
+2024.01.25 13:03:18 INFO  Attaching to debuggee VM succeeded.
+2024.01.25 13:03:20 INFO  Canceling debug proxy for [todo.IdGeneratorSuite()]
+2024.01.25 13:03:20 INFO  Closing debug server tcp://0.0.0.0:57332
+Jan. 25, 2024 3:33:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1283
+2024.01.25 15:44:21 INFO  compiling todo-test (1 scala source)
+2024.01.25 15:44:28 INFO  time: compiled todo-test in 6.77s
+2024.01.25 15:45:52 WARN  Using indexes to guess the definition of apply
+2024.01.25 15:45:52 WARN  Using indexes to guess the definition of apply
+Jan. 25, 2024 3:46:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1778
+Jan. 25, 2024 3:47:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1848
+Jan. 25, 2024 3:52:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/todo/.metals/.reports/metals-full/2024-01-25/r_compiler-error_(todo-test)_15-52-00-561.md
+Jan. 25, 2024 3:52:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2332
+2024.01.25 15:55:14 INFO  compiling todo-test (1 scala source)
+2024.01.25 15:55:14 WARN  Could not load snapshot text for /Users/mingma/todo/src/test/scala/todo/TodoSuite.scala
+2024.01.25 15:55:14 WARN  Could not load snapshot text for /Users/mingma/todo/src/test/scala/todo/TodoSuite.scala
+2024.01.25 15:55:14 INFO  time: compiled todo-test in 0.75s
+Jan. 25, 2024 3:55:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2649
+Jan. 25, 2024 3:55:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2651
+2024.01.25 15:55:48 INFO  time: code lens generation in 2.47s
+Jan. 25, 2024 3:55:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2669
+Jan. 25, 2024 3:55:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2670
+Jan. 25, 2024 3:55:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2671
+Jan. 25, 2024 4:42:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3563
+2024.01.25 16:46:33 INFO  compiling todo (1 scala source)
+2024.01.25 16:46:35 INFO  time: compiled todo in 2.04s
+2024.01.25 16:47:26 INFO  compiling todo (1 scala source)
+2024.01.25 16:47:28 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 16:47:28 INFO  time: compiled todo in 2s
+Jan. 25, 2024 4:59:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4547
+Jan. 25, 2024 5:10:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5391
+Jan. 25, 2024 5:10:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5477
+2024.01.25 17:15:31 INFO  compiling todo (1 scala source)
+2024.01.25 17:15:32 INFO  time: compiled todo in 1.17s
+2024.01.25 17:16:38 INFO  compiling todo (1 scala source)
+2024.01.25 17:16:39 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:16:39 INFO  time: compiled todo in 1.58s
+2024.01.25 17:16:40 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:00 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:01 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:05 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:05 INFO  compiling todo (1 scala source)
+2024.01.25 17:17:06 INFO  time: compiled todo in 1.07s
+2024.01.25 17:17:07 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:14 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:15 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:17:15 INFO  compiling todo (1 scala source)
+2024.01.25 17:17:15 INFO  time: compiled todo in 0.6s
+2024.01.25 17:17:29 INFO  compiling todo-test (1 scala source)
+2024.01.25 17:17:29 INFO  time: compiled todo-test in 0.31s
+2024.01.25 17:20:01 INFO  compiling todo (1 scala source)
+2024.01.25 17:20:01 INFO  time: compiled todo in 0.54s
+2024.01.25 17:20:47 INFO  compiling todo (1 scala source)
+2024.01.25 17:20:47 INFO  time: compiled todo in 0.5s
+2024.01.25 17:21:35 INFO  compiling todo (1 scala source)
+2024.01.25 17:21:35 INFO  time: compiled todo in 0.57s
+2024.01.25 17:21:44 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.01.25 17:21:44 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.01.25 17:21:45 INFO  Starting debug proxy for [todo.TodoSuite()]
+2024.01.25 17:21:45 INFO  Trying to attach to remote debuggee VM localhost:57913 .
+2024.01.25 17:21:45 INFO  Attaching to debuggee VM succeeded.
+2024.01.25 17:21:46 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2024.01.25 17:21:46 INFO  Closing debug server tcp://0.0.0.0:57909
+2024.01.25 17:30:29 INFO  compiling todo (1 scala source)
+2024.01.25 17:30:29 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:29 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:32 INFO  time: compiled todo in 2.72s
+2024.01.25 17:30:32 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:33 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:33 INFO  compiling todo (1 scala source)
+2024.01.25 17:30:36 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:36 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:36 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:36 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:36 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:30:37 INFO  time: compiled todo in 3.39s
+2024.01.25 17:48:33 INFO  compiling todo (1 scala source)
+2024.01.25 17:48:34 INFO  time: compiled todo in 1.76s
+2024.01.25 17:48:39 INFO  compiling todo (1 scala source)
+2024.01.25 17:48:43 INFO  time: compiled todo in 3.81s
+2024.01.25 17:49:02 INFO  compiling todo (1 scala source)
+2024.01.25 17:49:03 INFO  time: compiled todo in 1.08s
+2024.01.25 17:50:32 INFO  compiling todo (1 scala source)
+2024.01.25 17:50:32 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:50:32 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:50:32 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:50:33 INFO  time: compiled todo in 1.32s
+2024.01.25 17:51:07 INFO  compiling todo (1 scala source)
+2024.01.25 17:51:11 INFO  time: compiled todo in 4.69s
+2024.01.25 17:52:00 INFO  compiling todo (1 scala source)
+2024.01.25 17:52:03 INFO  time: compiled todo in 2.58s
+2024.01.25 17:52:03 INFO  compiling todo (1 scala source)
+2024.01.25 17:52:06 INFO  time: compiled todo in 2.83s
+2024.01.25 17:52:58 INFO  compiling todo (1 scala source)
+2024.01.25 17:52:59 INFO  time: compiled todo in 1.55s
+2024.01.25 17:53:58 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:53:58 INFO  compiling todo (1 scala source)
+2024.01.25 17:54:01 INFO  time: compiled todo in 3.02s
+2024.01.25 17:54:01 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:54:24 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:04 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:07 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:12 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:21 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:21 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:23 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:23 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:34 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:55:50 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:56:42 WARN  Could not load snapshot text for /Users/mingma/todo/src/main/scala/todo/PersistentModel.scala
+2024.01.25 17:58:39 INFO  compiling todo (1 scala source)
+2024.01.25 17:58:43 INFO  time: compiled todo in 3.67s
+2024.01.25 17:59:01 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-server.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.01.25 17:59:01 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/todo/.metals/dap-client.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.01.25 17:59:02 INFO  Starting debug proxy for [todo.TodoSuite()]
+2024.01.25 17:59:02 INFO  Trying to attach to remote debuggee VM localhost:57999 .
+2024.01.25 17:59:02 INFO  Attaching to debuggee VM succeeded.
+2024.01.25 17:59:03 INFO  Canceling debug proxy for [todo.TodoSuite()]
+2024.01.25 17:59:03 INFO  Closing debug server tcp://0.0.0.0:57995
